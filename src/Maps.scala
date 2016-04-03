@@ -29,6 +29,10 @@ object Maps {
       printf("%s: %s\n", k,v)
 
 
+    List(1,2,4,6,8,9).map((x:Int) => x * 10).foreach(println)
+
+    //Filter
+    List(1,2,4,6,8,3,9).filter(_%2 == 0).foreach(println)
 
   }
 
