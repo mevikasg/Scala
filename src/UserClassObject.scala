@@ -32,6 +32,11 @@ object UserClassObject {
     val internalUser = new InternalUser("Ajay", "Gupta", 38)
 
     printf("%d %s  %s  %d %d\n",internalUser.id, internalUser.fName, internalUser.lName, internalUser.age ,internalUser.mySalary())
+
+    val myCar: Car = new Car("Sedan", "Camry", 5)
+    myCar.getSeating
+
+
   }
 
 
@@ -121,4 +126,27 @@ object UserClassObject {
   class UserKlass() {
 
   }
+
+  abstract class Vehicle (val vehicleType:String){
+
+    var name : String
+
+    def getSeating
+  }
+
+  class Car (vehicleType:String, vehicleName: String, seating: Int) extends Vehicle(vehicleType) {
+
+    override var name = vehicleName
+    //    var name = this.name
+    //    var seating = this.
+
+    def getSeating: Unit = {
+
+      printf("%s (%s) has total %d seating \n",vehicleName,this.vehicleType,this.seating)
+    }
+
+
+
+  }
+
 }
